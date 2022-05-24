@@ -1,0 +1,255 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+  height: 100%;
+  overflow-y: auto;
+  background: url(../img/wooden-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+.title {
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px #aaa;
+  color: #545454;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.font-cursive {
+  font-family: "Great Vibes", cursive;
+  font-size: 64px;
+  margin-right: 20px;
+}
+
+.subtitle {
+  margin-top: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px #aaa;
+  color: #545454;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.form {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.form-group.error label {
+  color: #dc3545;
+}
+
+.form-group.error input {
+  border-color: #dc3545;
+}
+
+.form-group.error .error-message {
+  display: block;
+}
+
+.form-group.w-50 {
+  width: 50%;
+}
+
+.form-group.date label {
+  top: -12px;
+  left: 0;
+}
+
+.form-group.payment .label,
+.form-group.gift .label {
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.form-group.payment .label .mandatory {
+  color: #dc3545;
+}
+
+.form-group.payment input,
+.form-group.gift input {
+  width: auto;
+  cursor: pointer;
+}
+
+.form-group.payment input:nth-child(3) {
+  margin-left: 32px;
+}
+
+.form-group.payment label,
+.form-group.gift label {
+  position: static;
+  pointer-events: all;
+  cursor: pointer;
+  color: #000;
+}
+
+.form-group input {
+  width: 80%;
+  padding: 6px 12px;
+  border: 1px solid silver;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-group input:focus ~ label {
+  top: -12px;
+  left: 0;
+}
+
+.form-group label {
+  color: #333;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.form-group label .mandatory {
+  color: #dc3545;
+}
+
+.form-group .error-message {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 12px;
+  color: #dc3545;
+  font-size: 12px;
+  display: none;
+}
+
+.form-group.containsValue label {
+  top: -12px !important;
+  left: 0 !important;
+}
+
+.form-group.submit {
+  width: 100%;
+  text-align: center;
+}
+
+.form-group.submit button {
+  color: #fff;
+  background-color: #17a2b8;
+  outline: none !important;
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px 48px;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #17a2b8;
+  border-radius: 4px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.form-group.submit button:hover {
+  background-color: #138496;
+  border-color: #138496;
+}
+
+.form-group.submit button:disabled {
+  cursor: no-drop;
+  background-color: #138496;
+  border-color: #138496;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal__backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(41, 41, 41, 0.6);
+  z-index: 1;
+}
+
+.modal__window {
+  width: 600px;
+  height: max-content;
+  position: relative;
+  z-index: 2;
+  background-color: #fafafa;
+  border-radius: 9px;
+  transition: 0.3s;
+  padding: 24px;
+  color: #545454;
+}
+
+.modal__heading {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.modal__subheading {
+  text-align: center;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.modal__list {
+  margin-top: 40px;
+  width: max-content;
+  margin: 40px auto 0;
+}
